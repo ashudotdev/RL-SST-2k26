@@ -1,0 +1,246 @@
+{
+    "concepts": [
+        {
+            "name": "Numbers_Basics",
+            "difficulty": 0.2
+        },
+        {
+            "name": "Addition",
+            "difficulty": 0.3,
+            "prerequisites": [
+                "Numbers_Basics"
+            ]
+        },
+        {
+            "name": "Subtraction",
+            "difficulty": 0.3,
+            "prerequisites": [
+                "Numbers_Basics"
+            ]
+        },
+        {
+            "name": "Multiplication",
+            "difficulty": 0.4,
+            "prerequisites": [
+                "Addition"
+            ]
+        },
+        {
+            "name": "Division",
+            "difficulty": 0.5,
+            "prerequisites": [
+                "Multiplication"
+            ]
+        },
+        {
+            "name": "Fractions",
+            "difficulty": 0.6,
+            "prerequisites": [
+                "Division"
+            ]
+        },
+        {
+            "name": "Decimals",
+            "difficulty": 0.5,
+            "prerequisites": [
+                "Division"
+            ]
+        },
+        {
+            "name": "Percentages",
+            "difficulty": 0.5,
+            "prerequisites": [
+                "Fractions",
+                "Decimals"
+            ]
+        },
+        {
+            "name": "Pre_Algebra",
+            "difficulty": 0.6,
+            "prerequisites": [
+                "Percentages"
+            ]
+        },
+        {
+            "name": "Algebra_I",
+            "difficulty": 0.7,
+            "prerequisites": [
+                "Pre_Algebra"
+            ]
+        },
+        {
+            "name": "Geometry",
+            "difficulty": 0.7,
+            "prerequisites": [
+                "Algebra_I"
+            ]
+        },
+        {
+            "name": "Algebra_II",
+            "difficulty": 0.8,
+            "prerequisites": [
+                "Algebra_I"
+            ]
+        },
+        {
+            "name": "Trigonometry",
+            "difficulty": 0.8,
+            "prerequisites": [
+                "Geometry",
+                "Algebra_II"
+            ]
+        },
+        {
+            "name": "Pre_Calculus",
+            "difficulty": 0.8,
+            "prerequisites": [
+                "Trigonometry"
+            ]
+        },
+        {
+            "name": "Calculus",
+            "difficulty": 0.9,
+            "prerequisites": [
+                "Pre_Calculus"
+            ]
+        },
+        {
+            "name": "Scientific_Method",
+            "difficulty": 0.3
+        },
+        {
+            "name": "Measurement_Units",
+            "difficulty": 0.4,
+            "prerequisites": [
+                "Numbers_Basics"
+            ]
+        },
+        {
+            "name": "Earth_Science",
+            "difficulty": 0.5,
+            "prerequisites": [
+                "Scientific_Method"
+            ]
+        },
+        {
+            "name": "Biology_Intro",
+            "difficulty": 0.6,
+            "prerequisites": [
+                "Scientific_Method"
+            ]
+        },
+        {
+            "name": "Cell_Biology",
+            "difficulty": 0.7,
+            "prerequisites": [
+                "Biology_Intro"
+            ]
+        },
+        {
+            "name": "Genetics",
+            "difficulty": 0.8,
+            "prerequisites": [
+                "Cell_Biology"
+            ]
+        },
+        {
+            "name": "Chemistry_Intro",
+            "difficulty": 0.6,
+            "prerequisites": [
+                "Scientific_Method",
+                "Pre_Algebra"
+            ]
+        },
+        {
+            "name": "Chemical_Reactions",
+            "difficulty": 0.8,
+            "prerequisites": [
+                "Chemistry_Intro"
+            ]
+        },
+        {
+            "name": "Physics_Intro",
+            "difficulty": 0.7,
+            "prerequisites": [
+                "Scientific_Method",
+                "Algebra_I"
+            ]
+        },
+        {
+            "name": "Mechanics",
+            "difficulty": 0.8,
+            "prerequisites": [
+                "Physics_Intro",
+                "Trigonometry"
+            ]
+        },
+        {
+            "name": "Reading_Basics",
+            "difficulty": 0.2
+        },
+        {
+            "name": "Vocabulary",
+            "difficulty": 0.3,
+            "prerequisites": [
+                "Reading_Basics"
+            ]
+        },
+        {
+            "name": "Grammar",
+            "difficulty": 0.4,
+            "prerequisites": [
+                "Reading_Basics"
+            ]
+        },
+        {
+            "name": "Writing_Sentences",
+            "difficulty": 0.4,
+            "prerequisites": [
+                "Vocabulary",
+                "Grammar"
+            ]
+        },
+        {
+            "name": "Paragraphs",
+            "difficulty": 0.5,
+            "prerequisites": [
+                "Writing_Sentences"
+            ]
+        },
+        {
+            "name": "Essays",
+            "difficulty": 0.7,
+            "prerequisites": [
+                "Paragraphs"
+            ]
+        },
+        {
+            "name": "Literature_Analysis",
+            "difficulty": 0.8,
+            "prerequisites": [
+                "Essays"
+            ]
+        },
+        {
+            "name": "History_Basics",
+            "difficulty": 0.3,
+            "prerequisites": [
+                "Reading_Basics"
+            ]
+        },
+        {
+            "name": "World_History",
+            "difficulty": 0.6,
+            "prerequisites": [
+                "History_Basics"
+            ]
+        },
+        {
+            "name": "Civics",
+            "difficulty": 0.5,
+            "prerequisites": [
+                "History_Basics"
+            ]
+        }
+    ]
+}

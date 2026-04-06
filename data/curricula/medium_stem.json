@@ -1,0 +1,109 @@
+{
+    "concepts": [
+        {
+            "name": "Numbers_Basics",
+            "difficulty": 0.2
+        },
+        {
+            "name": "Addition_Subtraction",
+            "difficulty": 0.3,
+            "prerequisites": [
+                "Numbers_Basics"
+            ]
+        },
+        {
+            "name": "Multiplication_Division",
+            "difficulty": 0.5,
+            "prerequisites": [
+                "Addition_Subtraction"
+            ]
+        },
+        {
+            "name": "Fractions",
+            "difficulty": 0.6,
+            "prerequisites": [
+                "Multiplication_Division"
+            ]
+        },
+        {
+            "name": "Percentages",
+            "difficulty": 0.5,
+            "prerequisites": [
+                "Fractions"
+            ]
+        },
+        {
+            "name": "Scientific_Method",
+            "difficulty": 0.4
+        },
+        {
+            "name": "Measurement",
+            "difficulty": 0.3,
+            "prerequisites": [
+                "Numbers_Basics"
+            ]
+        },
+        {
+            "name": "Forces",
+            "difficulty": 0.6,
+            "prerequisites": [
+                "Scientific_Method",
+                "Measurement"
+            ]
+        },
+        {
+            "name": "Energy",
+            "difficulty": 0.7,
+            "prerequisites": [
+                "Forces"
+            ]
+        },
+        {
+            "name": "Algebra_Intro",
+            "difficulty": 0.6,
+            "prerequisites": [
+                "Fractions",
+                "Numbers_Basics"
+            ]
+        },
+        {
+            "name": "Graphs",
+            "difficulty": 0.4,
+            "prerequisites": [
+                "Addition_Subtraction",
+                "Scientific_Method"
+            ]
+        },
+        {
+            "name": "Data_Analysis",
+            "difficulty": 0.7,
+            "prerequisites": [
+                "Algebra_Intro",
+                "Graphs"
+            ]
+        },
+        {
+            "name": "Geometry_Basics",
+            "difficulty": 0.5,
+            "prerequisites": [
+                "Measurement",
+                "Algebra_Intro"
+            ]
+        },
+        {
+            "name": "Earth_Science",
+            "difficulty": 0.4,
+            "prerequisites": [
+                "Scientific_Method"
+            ]
+        },
+        {
+            "name": "Biology_Basics",
+            "difficulty": 0.5,
+            "prerequisites": [
+                "Scientific_Method",
+                "Measurement"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+{
+  "concepts": [
+    {"name": "Numbers_Basics", "difficulty": 0.2},
+    {"name": "Addition", "difficulty": 0.3, "prerequisites": ["Numbers_Basics"]},
+    {"name": "Subtraction", "difficulty": 0.3, "prerequisites": ["Numbers_Basics"]},
+    {"name": "Multiplication", "difficulty": 0.5, "prerequisites": ["Addition"]},
+    {"name": "Division", "difficulty": 0.6, "prerequisites": ["Multiplication"]}
+  ]
+}

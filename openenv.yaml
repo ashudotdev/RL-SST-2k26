@@ -1,0 +1,61 @@
+openenv_version: "1.0"
+environment:
+  name: "AdaptiveLearner"
+  version: "v0"
+  description: "Adaptive learning path optimization for personalized education"
+  
+action_space:
+  type: "Discrete"
+  n: "n_concepts + 1"  # n_concepts learnable + 1 NO-OP
+  dtype: "int32"
+  
+observation_space:
+  type: "Box"
+  shape: ["variable"]  # Depends on n_concepts
+  dtype: "float32"
+  components:
+    - mastery_levels: n_concepts
+    - prerequisites_met: n_concepts
+    - time_invested: n_concepts
+    - days_since_review: n_concepts
+    - student_info: 10
+    
+reset_signature:
+  args:
+    - name: seed
+      type: int
+      required: false
+  returns:
+    type: dict
+    keys: [mastery_levels, prerequisites_met, time_invested]
+    
+step_signature:
+  args:
+    - name: action
+      type: int
+  returns:
+    - observation: dict
+    - reward: float
+    - done: bool
+    - info: dict
+
+state_signature:
+  returns:
+    type: dict
+    description: "Complete observable state"
+
+tasks:
+  - name: easy
+    description: "Elementary Arithmetic (5 concepts)"
+    n_concepts: 5
+    max_steps: 50
+    
+  - name: medium
+    description: "Foundation STEM (15 concepts)"
+    n_concepts: 15
+    max_steps: 100
+    
+  - name: hard
+    description: "Full K-12+ Curriculum (35+ concepts)"
+    n_concepts: 35
+    max_steps: 150
