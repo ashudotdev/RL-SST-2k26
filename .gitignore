@@ -3,16 +3,29 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# environments
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Virtual Environments
 venv/
-env/
 .venv/
-.env/
+# Do not ignore "env/" because that contains the project source code!
 
-# pytest
+# Env files
+.env
+.env.local
+
+# pytest / Testing
 .pytest_cache/
+.coverage
+htmlcov/
+log.txt
+_test_out.txt
 
-# python distribution packaging
+# Python distribution packaging
 *.egg-info/
 dist/
 build/
@@ -20,3 +33,4 @@ build/
 
 # OS specific files
 .DS_Store
+Thumbs.db

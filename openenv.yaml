@@ -37,6 +37,7 @@ step_signature:
     - observation: dict
     - reward: float
     - done: bool
+    - truncated: bool
     - info: dict
 
 state_signature:
