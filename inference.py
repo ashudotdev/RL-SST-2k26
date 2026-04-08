@@ -60,7 +60,7 @@ def run_task(task_name, env, grader_fn):
     obs, info = env.reset()
     n = env.n_concepts
 
-    print(f"[START] task={task_name} env={BENCHMARK} model={MODEL_NAME}")
+    print(f"[START] task={task_name}")
 
     done = False
     step_num = 0
@@ -101,10 +101,7 @@ def run_task(task_name, env, grader_fn):
         rewards_list.append(reward)
 
         done_str = "true" if done else "false"
-        print(
-            f"[STEP] step={step_num} action={action} "
-            f"reward={reward:.2f} done={done_str} error={error}"
-        )
+        print(f"[STEP] action={action}")
 
     # ── Score via grader ──────────────────────────────────────────────
     actions_taken = list(range(step_num))  # placeholder list of length step_num
@@ -113,10 +110,9 @@ def run_task(task_name, env, grader_fn):
     success_str = "true" if score > 0.0 else "false"
     rewards_str = ",".join(f"{r:.2f}" for r in rewards_list)
     
-    # Exact strict format: [END]   success=<true|false> steps=<n> rewards=<r1,r2,...,rn>
+    # Exact strict format required by evaluator
     print(
-        f"[END] success={success_str} steps={step_num} "
-        f"rewards={rewards_str}"
+        f"[END] reward={score:.4f} done={done}"
     )
 
     return score
