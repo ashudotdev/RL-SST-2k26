@@ -24,10 +24,13 @@ from tasks.graders import grade_easy, grade_medium, grade_hard
 # ── Config ────────────────────────────────────────────────────────────
 API_BASE_URL = os.getenv("API_BASE_URL", "https://router.huggingface.co/v1")
 MODEL_NAME = os.getenv("MODEL_NAME", "Qwen/Qwen2.5-72B-Instruct")
-HF_TOKEN = os.getenv("HF_TOKEN") or os.getenv("API_KEY")
+HF_TOKEN = os.getenv("HF_TOKEN")
+
+# Optional - if you use from_docker_image():
+LOCAL_IMAGE_NAME = os.getenv("LOCAL_IMAGE_NAME")
 
 if HF_TOKEN is None:
-    print("[WARNING] HF_TOKEN environment variable is not set. LLM inference will fail.")
+    raise ValueError("HF_TOKEN environment variable is required")
 
 BENCHMARK = "AdaptiveLearner-v0"
 
