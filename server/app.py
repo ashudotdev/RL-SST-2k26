@@ -25,6 +25,7 @@ class StepRequest(BaseModel):
 def read_root():
     return {"status": "ok", "environment": "AdaptiveLearner-v0"}
 
+@app.get("/reset")
 @app.post("/reset")
 def reset_endpoint(req: ResetRequest = None):
     global global_env
