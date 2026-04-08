@@ -28,7 +28,8 @@ def grade_episode(env: AdaptiveLearnerEnv, actions: list[int], rewards: list[flo
     efficiency = max(0.0, 1.0 - (steps_used / env.max_steps)) if env.max_steps > 0 else 0.0
     
     score = (mean_mastery * 0.6) + (reward_score * 0.3) + (efficiency * 0.1)
-    return max(0.0, min(1.0, score))
+    # The hackathon validator requires scores strictly between (0, 1) exclusive.
+    return max(0.001, min(0.999, score))
 
 
 def grade_easy(env: AdaptiveLearnerEnv, actions: list[int], rewards: list[float]) -> float:
