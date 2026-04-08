@@ -5,8 +5,12 @@ import numpy as np
 
 class CurriculumLoader:
     def __init__(self, curriculum_file: str):
-        with open(curriculum_file, 'r') as f:
-            self.data = json.load(f)
+        try:
+            with open(curriculum_file, 'r') as f:
+                self.data = json.load(f)
+        except Exception as e:
+            print(f"Error loading curriculum file {curriculum_file}: {e}")
+            self.data = {"concepts": []}
             
         self.concepts = self.data.get('concepts', [])
         self.n_concepts = len(self.concepts)

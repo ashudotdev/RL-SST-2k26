@@ -60,7 +60,7 @@ def run_task(task_name, env, grader_fn):
     obs, info = env.reset()
     n = env.n_concepts
 
-    print(f"[START] task={task_name}")
+    print(f"[START] task={task_name} env=AdaptiveLearner-v0 model={MODEL_NAME}")
 
     done = False
     step_num = 0
@@ -101,7 +101,7 @@ def run_task(task_name, env, grader_fn):
         rewards_list.append(reward)
 
         done_str = "true" if done else "false"
-        print(f"[STEP] action={action}")
+        print(f"[STEP]  step={step_num} action={action} reward={reward:.2f} done={done_str} error={error}")
 
     # ── Score via grader ──────────────────────────────────────────────
     actions_taken = list(range(step_num))  # placeholder list of length step_num
@@ -111,9 +111,7 @@ def run_task(task_name, env, grader_fn):
     rewards_str = ",".join(f"{r:.2f}" for r in rewards_list)
     
     # Exact strict format required by evaluator
-    print(
-        f"[END] reward={score:.4f} done={done}"
-    )
+    print(f"[END]   success={success_str} steps={step_num} rewards={rewards_str}")
 
     return score
 
@@ -127,8 +125,12 @@ def main():
     ]
 
     for task_name, make_fn, grader_fn in tasks:
-        env = make_fn()
-        run_task(task_name, env, grader_fn)
+        try:
+            env = make_fn()
+            run_task(task_name, env, grader_fn)
+        except Exception as e:
+            print(f"[START] task={task_name} env=AdaptiveLearner-v0 model={MODEL_NAME}")
+            print(f"[END]   success=false steps=0 rewards=0.0 error={str(e).replace(' ', '_')}")
 
 
 if __name__ == "__main__":
