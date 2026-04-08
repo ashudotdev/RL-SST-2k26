@@ -12,4 +12,4 @@ COPY . .
 # Install package in editable mode
 RUN pip install -e .
 
-CMD ["python", "inference.py"]
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "7860"]

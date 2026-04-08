@@ -27,7 +27,7 @@ MODEL_NAME = os.getenv("MODEL_NAME", "Qwen/Qwen2.5-72B-Instruct")
 HF_TOKEN = os.getenv("HF_TOKEN") or os.getenv("API_KEY")
 
 if HF_TOKEN is None:
-    raise ValueError("HF_TOKEN environment variable is required")
+    print("[WARNING] HF_TOKEN environment variable is not set. LLM inference will fail.")
 
 BENCHMARK = "AdaptiveLearner-v0"
 
