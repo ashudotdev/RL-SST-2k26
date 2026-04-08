@@ -16,9 +16,9 @@ import os
 import numpy as np
 from openai import OpenAI
 
-from tasks.easy_task import make_easy_task
-from tasks.medium_task import make_medium_task
-from tasks.hard_task import make_hard_task
+from tasks.easy import make_easy_task
+from tasks.medium import make_medium_task
+from tasks.hard import make_hard_task
 from tasks.graders import grade_easy, grade_medium, grade_hard
 
 # ── Config ────────────────────────────────────────────────────────────

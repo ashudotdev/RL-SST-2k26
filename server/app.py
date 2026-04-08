@@ -3,7 +3,7 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, ConfigDict
 from typing import Any, Dict, Optional
 
-from tasks.easy_task import make_easy_task
+from tasks.easy import make_easy_task
 
 app = FastAPI(title="AdaptiveLearner-v0 Space API")
 
