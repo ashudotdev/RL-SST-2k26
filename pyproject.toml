@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "adaptive_learner_v0"
+version = "1.0.0"
+description = "Adaptive learning path optimization for personalized education"
+dependencies = [
+    "gymnasium>=0.26.0",
+    "numpy>=1.21.0",
+    "networkx>=2.6.0",
+    "openenv-core>=0.2.0"
+]
+
+[project.scripts]
+server = "server.app:main"
