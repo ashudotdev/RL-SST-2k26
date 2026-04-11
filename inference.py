@@ -111,7 +111,7 @@ def run_task(task_name, env, grader_fn):
     rewards_str = ",".join(f"{r:.2f}" for r in rewards_list)
     
     # Exact strict format required by evaluator PLUS the actual score the evaluator depends on
-    print(f"[END]   reward={score:.4f} success={success_str} steps={step_num} rewards={rewards_str}")
+    print(f"[END]   score={score:.4f} success={success_str} steps={step_num} rewards={rewards_str}", flush=True)
 
     return score
 
@@ -131,7 +131,7 @@ def main():
         except Exception as e:
             print(f"[START] task={task_name} env=AdaptiveLearner-v0 model={MODEL_NAME}")
             # If an error happens, we MUST print a strictly valid score (0.01) to prevent validation aborts
-            print(f"[END]   reward=0.0100 success=false steps=0 rewards=0.0 error={str(e).replace(' ', '_')}")
+            print(f"[END]   score=0.0100 success=false steps=0 rewards=0.0 error={str(e).replace(' ', '_')}", flush=True)
 
 
 if __name__ == "__main__":
